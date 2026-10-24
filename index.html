@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Tienda de motos y triciclos en La Habana. Consulta modelos y realiza pedidos por WhatsApp.">
+<title>Tienda de motos y triciclos en La Habana</title>
+<style>
+:root{--blue:#0866d9;--deep:#073b82;--pale:#eaf3ff;--ink:#10243e;--muted:#65758b;--white:#fff}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;font-family:Arial,Helvetica,sans-serif;color:var(--ink);background:#f5f8fc}
+header{background:linear-gradient(120deg,#063779,#0878ee);color:white;padding:18px 5%;display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap}
+.brand{display:flex;align-items:center;gap:12px}.logo{width:48px;height:48px;border-radius:14px;background:white;color:var(--blue);display:grid;place-items:center;font-size:26px;font-weight:900}.brand h1{font-size:clamp(17px,2.5vw,24px);margin:0}.brand p{margin:4px 0 0;color:#d7e9ff;font-size:13px}
+nav{display:flex;gap:18px;align-items:center;flex-wrap:wrap}nav a{color:white;text-decoration:none;font-weight:700;font-size:14px}
+.btn{display:inline-block;border:0;border-radius:10px;padding:12px 17px;text-decoration:none;font-weight:700;cursor:pointer;font-size:14px}.btn-light{background:white;color:var(--deep)}.btn-blue{background:var(--blue);color:white}.btn-outline{border:1px solid #cbd9ea;background:white;color:var(--deep)}
+.hero{padding:60px 5% 54px;background:linear-gradient(130deg,#eaf3ff,#fff);display:grid;grid-template-columns:1.3fr .7fr;align-items:center;gap:32px}
+.eyebrow{color:var(--blue);font-size:12px;font-weight:800;text-transform:uppercase;letter-spacing:1.5px}.hero h2{font-size:clamp(32px,5vw,56px);line-height:1.05;margin:12px 0 16px;color:#092e62}.hero p{font-size:17px;line-height:1.65;color:#536780;max-width:600px}.hero-card{background:linear-gradient(145deg,#0878ee,#063779);color:white;min-height:230px;border-radius:24px;padding:28px;display:flex;flex-direction:column;justify-content:space-between;box-shadow:0 18px 40px #0b5ab32a}.hero-card .emoji{font-size:72px}.hero-card strong{font-size:23px}.hero-card span{color:#d7e9ff;font-size:14px;line-height:1.5}
+section{padding:42px 5%}.section-head{display:flex;align-items:end;justify-content:space-between;gap:16px;flex-wrap:wrap;margin-bottom:22px}.section-head h2{margin:0;font-size:clamp(25px,3vw,34px);color:#092e62}.section-head p{margin:8px 0 0;color:var(--muted)}
+.toolbar{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:22px}.toolbar input,.toolbar select,.form-grid input,.form-grid textarea,.form-grid select{font:inherit;padding:12px;border:1px solid #d3dfed;border-radius:10px;background:white;min-width:0}.toolbar input{flex:1;min-width:180px}
+.grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}.product{background:white;border:1px solid #e1eaf4;border-radius:17px;overflow:hidden;box-shadow:0 6px 18px #12355b0b}.product-img{height:170px;background:linear-gradient(135deg,#e9f2ff,#d8e8fc);display:grid;place-items:center;font-size:58px;color:#3c79c6}.product-body{padding:17px}.tag{display:inline-block;padding:5px 9px;background:#e7f1ff;color:#0758bd;border-radius:99px;font-size:11px;font-weight:800}.product h3{margin:11px 0 7px;font-size:19px}.product p{color:var(--muted);line-height:1.5;font-size:14px;margin:0 0 15px}.empty{grid-column:1/-1;text-align:center;background:white;border:1px dashed #b8cde7;border-radius:18px;padding:40px 20px}.empty .emoji{font-size:48px}.empty h3{margin:12px 0 8px;color:#092e62}.empty p{color:var(--muted);max-width:500px;margin:0 auto 18px;line-height:1.6}
+#admin{background:#eaf3ff}.admin-panel{background:white;border:1px solid #d7e5f7;border-radius:18px;padding:22px;max-width:900px}.admin-panel>p{color:var(--muted);line-height:1.5}.form-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}.form-grid textarea{grid-column:1/-1;min-height:90px;resize:vertical}.form-grid input[type=file]{padding:9px}.form-actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:14px}.small-note{font-size:12px;color:#687b93;line-height:1.5}
+.contact{background:#073b82;color:white;display:flex;align-items:center;justify-content:space-between;gap:20px;flex-wrap:wrap;border-radius:20px;padding:28px}.contact h2{margin:0 0 8px}.contact p{margin:0;color:#d7e9ff;line-height:1.5}
+footer{padding:25px 5%;text-align:center;color:#718198;font-size:13px}
+.whatsapp-float{position:fixed;right:18px;bottom:18px;z-index:5;background:#16a765;color:white;text-decoration:none;padding:14px 17px;border-radius:999px;font-weight:800;box-shadow:0 8px 22px #0002}
+@media(max-width:800px){.hero{grid-template-columns:1fr;padding-top:42px}.hero-card{min-height:180px}.grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:520px){header{padding:15px 4%}nav{gap:12px}.hero,section{padding-left:4%;padding-right:4%}.grid{grid-template-columns:1fr}.form-grid{grid-template-columns:1fr}.form-grid textarea{grid-column:auto}.product-img{height:150px}.contact{padding:22px}.whatsapp-float{right:12px;bottom:12px}}
+</style>
+</head>
+<body>
+<header>
+  <div class="brand"><div class="logo" aria-label="Logo tienda">TM</div><div><h1>Tienda de motos y triciclos</h1><p>La Habana · Catálogo y pedidos</p></div></div>
+  <nav><a href="#catalogo">Catálogo</a><a href="#admin">Añadir productos</a><a href="#contacto">Contacto</a></nav>
+</header>
+<main>
+  <div class="hero">
+    <div><div class="eyebrow">Tu próximo vehículo comienza aquí</div><h2>Motos y triciclos para tu día a día.</h2><p>Explora nuestro catálogo de vehículos. Estamos preparando las publicaciones; vuelve pronto o escríbenos directamente para consultar disponibilidad.</p><a class="btn btn-blue" href="#catalogo">Ver catálogo</a> <a class="btn btn-outline" href="https://wa.me/5352076888?text=Hola%2C%20quiero%20informaci%C3%B3n%20sobre%20motos%20y%20triciclos." target="_blank" rel="noopener">Consultar por WhatsApp</a></div>
+    <div class="hero-card"><div class="emoji">🏍️ 🛺</div><strong>Movilidad para todos los días</strong><span>Motos · Triciclos eléctricos · Vehículos de carga</span></div>
+  </div>
+  <section id="catalogo">
+    <div class="section-head"><div><h2>Catálogo de productos</h2><p>Los productos que agregues aparecerán aquí.</p></div><span class="tag" id="count">0 productos</span></div>
+    <div class="toolbar"><input id="search" type="search" placeholder="Buscar por nombre o descripción..." aria-label="Buscar productos"><select id="filter" aria-label="Filtrar por categoría"><option value="">Todas las categorías</option><option>Motos</option><option>Triciclos eléctricos</option><option>Otros</option></select></div>
+    <div class="grid" id="products"></div>
+  </section>
+  <section id="admin">
+    <div class="section-head"><div><h2>Añadir productos</h2><p>Completa los datos para crear una tarjeta en el catálogo.</p></div></div>
+    <div class="admin-panel">
+      <p><strong>Panel de administración:</strong> añade, edita o elimina productos. En esta versión los cambios se guardan en este navegador y dispositivo; para que todos los clientes vean los cambios se necesita conectar un panel compartido después de publicar la web.</p>
+      <form id="productForm">
+        <div class="form-grid">
+          <input id="name" required maxlength="90" placeholder="Nombre del producto">
+          <select id="category" required><option value="">Selecciona categoría</option><option>Motos</option><option>Triciclos eléctricos</option><option>Otros</option></select>
+          <input id="price" placeholder="Precio (opcional)">
+          <input id="image" type="file" accept="image/*" aria-label="Foto del producto">
+          <textarea id="description" maxlength="500" placeholder="Descripción y especificaciones (opcional)"></textarea>
+        </div>
+        <div class="form-actions"><button class="btn btn-blue" type="submit" id="submitProduct">＋ Añadir al catálogo</button><button class="btn btn-outline" type="button" id="cancelEdit" hidden>Cancelar edición</button><button class="btn btn-outline" type="button" id="clearAll">Vaciar catálogo</button></div>
+      </form>
+      <p class="small-note">Consejo: usa fotos claras y precios actualizados. No incluyas datos personales de clientes en las descripciones.</p>
+    </div>
+  </section>
+  <section id="contacto">
+    <div class="contact"><div><h2>¿Buscas una moto o un triciclo?</h2><p>Escríbenos para consultar precios, modelos y disponibilidad.</p></div><a class="btn btn-light" href="https://wa.me/5352076888?text=Hola%2C%20quiero%20consultar%20por%20un%20veh%C3%ADculo." target="_blank" rel="noopener">Hablar por WhatsApp ↗</a></div>
+  </section>
+</main>
+<footer>© <span id="year"></span> Tienda de motos y triciclos en La Habana · Catálogo informativo</footer>
+<a class="whatsapp-float" href="https://wa.me/5352076888?text=Hola%2C%20quiero%20informaci%C3%B3n%20sobre%20un%20veh%C3%ADculo." target="_blank" rel="noopener" aria-label="Contactar por WhatsApp">WhatsApp ↗</a>
+<script>
+const KEY='habanaMotoTricicloProductsV1';
+let products=[]; let editingId=null;
+try{products=JSON.parse(localStorage.getItem(KEY)||'[]')}catch(e){products=[]}
+const $=id=>document.getElementById(id);
+$('year').textContent=new Date().getFullYear();
+function save(){try{localStorage.setItem(KEY,JSON.stringify(products))}catch(e){alert('No se pudo guardar. Intenta usar una imagen más pequeña.')}render()}
+function escapeHTML(s){return String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]))}
+function waLink(p){return 'https://wa.me/5352076888?text='+encodeURIComponent('Hola, me interesa '+p.name+(p.price?' ('+p.price+')':'')+'. ¿Me pueden dar más información?')}
+function render(){
+ const q=$('search').value.trim().toLowerCase(), cat=$('filter').value;
+ const filtered=products.filter(p=>(!cat||p.category===cat)&&(!q||(p.name+' '+p.description).toLowerCase().includes(q)));
+ $('count').textContent=products.length+' '+(products.length===1?'producto':'productos');
+ const root=$('products');
+ if(!filtered.length){root.innerHTML=`<div class="empty"><div class="emoji">🏍️ 🛺</div><h3>${products.length?'No hay resultados':'Próximamente, nuevos productos'}</h3><p>${products.length?'Prueba con otra búsqueda o categoría.':'El catálogo está listo para recibir motos y triciclos. Puedes añadir el primer producto desde el formulario de abajo.'}</p><a class="btn btn-blue" href="#admin">Añadir producto</a></div>`;return}
+ root.innerHTML=filtered.map(p=>`<article class="product"><div class="product-img">${p.image?`<img src="${p.image}" alt="${escapeHTML(p.name)}" style="width:100%;height:100%;object-fit:cover">`:'🏍️'}</div><div class="product-body"><span class="tag">${escapeHTML(p.category)}</span><h3>${escapeHTML(p.name)}</h3>${p.price?`<p><strong>${escapeHTML(p.price)}</strong></p>`:''}<p>${escapeHTML(p.description||'Consulta para obtener más información sobre este vehículo.')}</p><a class="btn btn-blue" href="${waLink(p)}" target="_blank" rel="noopener">Consultar por WhatsApp</a> <button class="btn btn-outline" type="button" data-edit="${p.id}">Editar</button> <button class="btn btn-outline" type="button" data-delete="${p.id}" aria-label="Eliminar ${escapeHTML(p.name)}">Eliminar</button></div></article>`).join('');
+}
+function resetEditor(){editingId=null;$('productForm').reset();$('submitProduct').textContent='＋ Añadir al catálogo';$('cancelEdit').hidden=true}
+$('cancelEdit').addEventListener('click',resetEditor);
+$('productForm').addEventListener('submit',e=>{
+ e.preventDefault();
+ const file=$('image').files[0];
+ const existing=products.find(p=>p.id===editingId);
+ const add=imageData=>{
+  const item={id:editingId||Date.now().toString(),name:$('name').value.trim(),category:$('category').value,price:$('price').value.trim(),description:$('description').value.trim(),image:imageData||(existing?existing.image:'')};
+  if(editingId){products=products.map(p=>p.id===editingId?item:p)}else{products.unshift(item)}
+  save();resetEditor();$('catalogo').scrollIntoView({behavior:'smooth'});
+ };
+ if(file){if(file.size>1_500_000){alert('La imagen debe pesar menos de 1.5 MB.');return}const reader=new FileReader();reader.onload=()=>add(reader.result);reader.readAsDataURL(file)}else add('');
+});
+$('products').addEventListener('click',e=>{
+ const del=e.target.dataset.delete, edit=e.target.dataset.edit;
+ if(del&&confirm('¿Eliminar este producto del catálogo?')){products=products.filter(p=>p.id!==del);if(editingId===del)resetEditor();save()}
+ if(edit){const p=products.find(x=>x.id===edit);if(!p)return;editingId=edit;$('name').value=p.name;$('category').value=p.category;$('price').value=p.price;$('description').value=p.description;$('image').value='';$('submitProduct').textContent='Guardar cambios';$('cancelEdit').hidden=false;$('admin').scrollIntoView({behavior:'smooth'})}
+});
+$('search').addEventListener('input',render);$('filter').addEventListener('change',render);
+$('clearAll').addEventListener('click',()=>{if(confirm('¿Seguro que quieres eliminar todos los productos guardados en este navegador?')){products=[];save()}});
+render();
+</script>
+</body>
+</html>
